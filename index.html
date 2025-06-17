@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スピードライン運輸株式会社 - 営業カタログ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh;
+            position: relative;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .service-card-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+        .section-divider {
+            border-top: 3px solid #3b82f6;
+            margin: 3rem 0;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- ヘッダー画像セクション -->
+    <div class="hero-image flex items-center justify-center text-white">
+        <div class="hero-content text-center animate-fade-in">
+            <h1 class="text-6xl font-bold mb-6 shadow-text">スピードライン運輸株式会社</h1>
+            <p class="text-2xl font-light mb-8">信頼と安全をお届けする総合物流サービス</p>
+            <div class="mt-8">
+                <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 mr-4">サービスを見る</a>
+                <a href="#contact" class="bg-transparent hover:bg-white text-white hover:text-blue-700 font-bold py-3 px-8 border-2 border-white rounded-full transition duration-300 ease-in-out transform hover:scale-105">お問い合わせ</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-12 bg-white">
+
+        <!-- 会社概要 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                <i class="fas fa-building mr-3 text-blue-500"></i>会社概要
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">企業理念</h3>
+                    <p class="text-gray-700 leading-relaxed">「迅速・確実・安心」をモットーに、お客様の大切な荷物を責任を持ってお届けいたします。全国ネットワークを活用し、最適な物流ソリューションを提供し続けます。</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-green-800 mb-4">事業展開</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>全国47都道府県対応</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>24時間365日受付体制</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>創業50年の実績と信頼</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>最新IT技術による追跡システム</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- サービス一覧 -->
+        <section id="services" class="mb-16 scroll-reveal">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                <i class="fas fa-truck mr-3 text-blue-500"></i>運送サービス
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="一般貨物運送">
+                    </div>
+                    <div class="p-6 border-l-4 border-blue-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">一般貨物運送</h3>
+                        <p class="text-gray-600 text-sm mb-4">企業間の商品輸送から個人の引越しまで、幅広い貨物運送に対応</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 大型トラック完備</li>
+                            <li>• 専門スタッフによる梱包</li>
+                            <li>• 保険完備で安心</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="宅配便サービス">
+                    </div>
+                    <div class="p-6 border-l-4 border-green-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">宅配便サービス</h3>
+                        <p class="text-gray-600 text-sm mb-4">個人・法人向けの小口配送サービス。翌日配達も可能</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 時間指定配達</li>
+                            <li>• 着払い・代引き対応</li>
+                            <li>• 配達状況リアルタイム追跡</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="冷蔵・冷凍運送">
+                    </div>
+                    <div class="p-6 border-l-4 border-red-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">冷蔵・冷凍運送</h3>
+                        <p class="text-gray-600 text-sm mb-4">食品・医薬品など温度管理が必要な商品の輸送</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• -30℃～+25℃対応</li>
+                            <li>• 温度記録システム</li>
+                            <li>• 食品衛生法準拠</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="大型貨物運送">
+                    </div>
+                    <div class="p-6 border-l-4 border-purple-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">大型貨物運送</h3>
+                        <p class="text-gray-600 text-sm mb-4">重機械・建設資材など特殊貨物の輸送</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• トレーラー完備</li>
+                            <li>• クレーン車対応</li>
+                            <li>• 特殊車両通行許可取得</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1563299796-17596ed6b017?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="緊急配送">
+                    </div>
+                    <div class="p-6 border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">緊急配送</h3>
+                        <p class="text-gray-600 text-sm mb-4">お急ぎの荷物に対応する特急配送サービス</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 当日配達可能</li>
+                            <li>• 24時間受付</li>
+                            <li>• 専用車両による直行便</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="倉庫・保管">
+                    </div>
+                    <div class="p-6 border-l-4 border-indigo-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">倉庫・保管</h3>
+                        <p class="text-gray-600 text-sm mb-4">商品の保管・在庫管理サービス</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 温度・湿度管理</li>
+                            <li>• セキュリティ完備</li>
+                            <li>• 在庫管理システム</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 料金体系 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                <i class="fas fa-yen-sign mr-3 text-blue-500"></i>料金体系
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">宅配便料金（税込）</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead class="bg-blue-50">
+                                <tr>
+                                    <th class="px-4 py-3 text-left">サイズ</th>
+                                    <th class="px-4 py-3 text-left">関東圏内</th>
+                                    <th class="px-4 py-3 text-left">全国</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3">60サイズ</td>
+                                    <td class="px-4 py-3">¥800</td>
+                                    <td class="px-4 py-3">¥1,200</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3">80サイズ</td>
+                                    <td class="px-4 py-3">¥1,000</td>
+                                    <td class="px-4 py-3">¥1,500</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3">100サイズ</td>
+                                    <td class="px-4 py-3">¥1,300</td>
+                                    <td class="px-4 py-3">¥1,900</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3">120サイズ</td>
+                                    <td class="px-4 py-3">¥1,600</td>
+                                    <td class="px-4 py-3">¥2,400</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">チャーター便料金</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-medium">軽トラック（2t未満）</span>
+                            <span class="text-blue-600 font-semibold">¥15,000～/日</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-medium">中型トラック（2-4t）</span>
+                            <span class="text-blue-600 font-semibold">¥25,000～/日</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-medium">大型トラック（4t以上）</span>
+                            <span class="text-blue-600 font-semibold">¥35,000～/日</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">冷凍車（追加料金）</span>
+                            <span class="text-red-600 font-semibold">+¥5,000/日</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4">※距離・時間により追加料金が発生する場合があります</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 会社の強み -->
+        <section id="strengths" class="mb-16 scroll-reveal">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                <i class="fas fa-star mr-3 text-blue-500"></i>スピードラインの強み
+            </h2>
+            
+            <!-- 強みの概要 -->
+            <div class="mb-10 bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/17/19/36/connection-3234929_1280.jpg" 
+                             alt="物流ネットワーク" class="rounded-lg shadow-lg w-full h-auto">
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">業界をリードする物流ソリューション</h3>
+                        <p class="text-gray-700 leading-relaxed">スピードライン運輸は、最新の技術と50年以上の経験を組み合わせ、お客様のニーズに合わせた最適な物流サービスを提供しています。全国に広がるネットワークと24時間体制のサポートで、いつでもどこでも安心してご利用いただけます。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 強みの詳細 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <div class="gradient-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-map-marked-alt text-3xl text-white"></i>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2018/03/27/12/16/analytics-3265840_1280.jpg" 
+                             alt="全国ネットワーク" class="w-full h-40 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">全国ネットワーク</h3>
+                    <p class="text-sm text-gray-600">47都道府県、主要都市に配送拠点を設置。効率的な配送網を構築し、どこへでも迅速にお届けします。</p>
+                </div>
+
+                <div class="text-center bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <div class="gradient-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-clock text-3xl text-white"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="24時間対応" class="w-full h-40 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">24時間対応</h3>
+                    <p class="text-sm text-gray-600">夜間・休日も含め、お客様のニーズにお応えする体制を整備。いつでも安心してご依頼いただけます。</p>
+                </div>
+
+                <div class="text-center bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <div class="gradient-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-search-location text-3xl text-white"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="追跡システム" class="w-full h-40 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">追跡システム</h3>
+                    <p class="text-sm text-gray-600">GPS追跡により、荷物の位置情報をリアルタイムで確認可能。お客様にも配送状況を共有できます。</p>
+                </div>
+
+                <div class="text-center bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <div class="gradient-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shield-alt text-3xl text-white"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="安全性重視" class="w-full h-40 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">安全性重視</h3>
+                    <p class="text-sm text-gray-600">定期的な車両点検と安全教育により、事故ゼロを目指しています。お客様の大切な荷物を安全にお届けします。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 実績と信頼 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                <i class="fas fa-chart-line mr-3 text-blue-500"></i>実績と信頼
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center">年間実績</h3>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <div class="text-3xl font-bold mb-2">2,500万件</div>
+                            <div class="text-sm opacity-90">年間取扱件数</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold mb-2">99.8%</div>
+                            <div class="text-sm opacity-90">配達成功率</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold mb-2">24時間</div>
+                            <div class="text-sm opacity-90">平均配達時間</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold mb-2">0.01%</div>
+                            <div class="text-sm opacity-90">破損率</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">主要取引先</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-building text-blue-500"></i>
+                            <span class="text-gray-700">大手製造業A社（継続取引15年）</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-store text-green-500"></i>
+                            <span class="text-gray-700">全国小売チェーンB社（継続取引12年）</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-laptop text-purple-500"></i>
+                            <span class="text-gray-700">EC大手C社（継続取引8年）</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-hospital text-red-500"></i>
+                            <span class="text-gray-700">医療機器メーカーD社（継続取引10年）</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-green-50 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-2">認証・資格</h4>
+                        <ul class="text-sm text-green-700 space-y-1">
+                            <li>• ISO 9001:2015 品質マネジメントシステム認証</li>
+                            <li>• 一般貨物自動車運送事業許可</li>
+                            <li>• 特定貨物自動車運送事業許可</li>
+                            <li>• 倉庫業登録</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- お問い合わせ -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-500 pb-4">
+                <i class="fas fa-phone mr-3 text-blue-500"></i>お問い合わせ
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">会社情報</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-building text-blue-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold">スピードライン運輸株式会社</div>
+                                <div class="text-gray-600">〒 547-0027</div>
+                                <div class="text-gray-600">大阪市平野区喜連3丁目100番</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-green-500"></i>
+                            <div>
+                                <div class="font-semibold">フリーダイヤル</div>
+                                <div class="text-xl font-bold text-green-600">0120-123-456</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-fax text-gray-500"></i>
+                            <div>
+                                <div class="font-semibold">FAX</div>
+                                <div class="text-gray-700">06-1234-5678</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <div>
+                                <div class="font-semibold">メール</div>
+                                <div class="text-blue-600">info@speedline-transport.co.jp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-blue-800 mb-6">受付時間・サービス</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">受付時間</h4>
+                            <div class="text-gray-600">
+                                <div>月～金: 8:00～20:00</div>
+                                <div>土日祝: 9:00～18:00</div>
+                                <div class="text-red-600 font-semibold mt-1">緊急時は24時間対応</div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">無料サービス</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• 見積もり（訪問・電話・メール）</li>
+                                <li>• 配送ルート提案</li>
+                                <li>• 梱包材提供（一部商品）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="gradient-bg text-white p-8 rounded-lg text-center">
+            <div class="mb-4">
+                <h3 class="text-2xl font-bold">スピードライン運輸株式会社</h3>
+                <p class="text-blue-100">あなたの物流パートナー</p>
+            </div>
+            <div class="text-sm text-blue-100">
+                <p>お見積もり・ご相談はお気軽にお問い合わせください</p>
+                <p class="mt-2">© 2024 Speedline Transport Co., Ltd. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- スクロールアニメーション用JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // スクロール時に要素を表示する関数
+            function revealOnScroll() {
+                var reveals = document.querySelectorAll('.scroll-reveal');
+                
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add('revealed');
+                    }
+                }
+            }
+            
+            // スクロールイベントに関数を結び付け
+            window.addEventListener('scroll', revealOnScroll);
+            
+            // 初期表示時にも実行
+            revealOnScroll();
+            
+            // ナビゲーションリンクのスムーズスクロール
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
